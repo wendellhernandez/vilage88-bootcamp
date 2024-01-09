@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p{
+    line-height: 1.4rem;
+}
+
+.container{
+    width: 760px;
+    margin: 0 auto;
+    padding: 20px;
+    background-image: linear-gradient(#ccc, white, white, white, #ccc);
+}
+
+header{
+    margin-bottom: 20px;
+}
+
+.profile_pic{
+    width: 220px;
+    height: 190px;
+    background-image: url('assets/photo_of_me.jpg');
+    background-size: cover;
+    background-position: -60px;
+    display: inline-block;
+}
+
+.profile_info{
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 30px;
+}
+
+.profile_info h1{
+    color: #2d4767;
+    font-size: 3rem;
+    margin-top: .3em;
+}
+
+.profile_info h3{
+    font-size: 1.1rem;
+    border-bottom: 2px solid #2d4767;
+    padding-bottom: 30px;
+}
+
+.profile_info p{
+    margin-top: 30px;
+}
+
+.bullet{
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    display: inline-block;
+    border-radius: 100vw;
+    margin-inline: 5px;
+    vertical-align: top;
+    margin-top: 8px;
+}
+
+.story_section{
+    background-color: #f0f1f3;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+h2{
+    text-align: center;
+}
+
+.story_section p{
+    text-align: justify;
+}
+
+.story_section p:nth-of-type(1){
+    display: inline-block;
+    margin-block: 1em;
+}
+
+.project_section aside{
+    display: inline-block;
+    width: 45%;
+    text-align: center;
+}
+
+.project_section aside img{
+    display: inline-block;
+    width: 17%;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+.project_section article{
+    display: inline-block;
+    width: 52%;
+    margin-left: 2%;
+    vertical-align: top;
+    background-image: linear-gradient(#ddd , white, #ddd, #ddd);
+    padding: 20px;
+}
+
+.project_section article h4:nth-last-of-type(1){
+    margin-top: 30px;
+}
+
+.project_section h2{
+    margin-bottom: 20px;
+}
+
+footer{
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer img{
+    width: 27px;
+}
+
+footer a{
+    vertical-align: top;
+    margin-top: 7px;
+    display: inline-block;
+}
