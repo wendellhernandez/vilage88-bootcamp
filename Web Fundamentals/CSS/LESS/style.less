@@ -1,0 +1,58 @@
+/*CSS reset settings here*/
+@import 'var.less';
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#wrapper{
+    width: 940px;
+    background-color: @wrapper;
+    margin: 0px auto;
+    padding: 20px;
+
+    .sponsors{
+        min-height: 65px;
+        width: 310px;
+        background-color: @sponsors;
+        display: inline-block;
+    }
+}
+#logo{
+    min-height: 130px;
+    width: 260px;
+    background-color: @logo;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+#navigation{
+    min-height: 130px;
+    width: 655px;
+    background-color: @navigation;
+    display: inline-block;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+#main_content{
+    min-height: 250px;
+    width: 860px;
+    background-color: @main_content;
+    padding: 40px;
+    margin-bottom: 20px;
+
+    #about{
+        min-height: 250px;
+        width: 650px;
+        background-color: @about;
+        display: inline-block;
+    }
+
+    #advertisement{
+        min-height: 200px;
+        width: 155px;
+        background-color: @advertisement;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 40px;
+    }
+}

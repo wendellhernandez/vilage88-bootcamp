@@ -1,0 +1,120 @@
+body{
+    background-color: #333;
+    font-size: 0px;
+}
+
+#wrapper{
+    width: 100%;
+    background-color: #FFD9B7;
+    padding-bottom: 20px;
+}
+
+#logo{
+    min-height: 130px;
+    width: 100%;
+    background-color: #B97A57;
+    display: inline-block;
+}
+
+#navigation{
+    min-height: 130px;
+    width: 100%;
+    background-color: #FF7F27;
+    display: inline-block;
+}
+
+#main_content{
+    min-height: 250px;
+    width: 92%;
+    background-color: #880015;
+    padding: 4%;
+}
+
+#about{
+    min-height: 250px;
+    width: 100%;
+    background-color: #FFAEC9;
+}
+
+.sponsors{
+    min-height: 65px;
+    width: 100%;
+    background-color: #FFFF88;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+@media only Screen and (min-width: 481px){
+    #wrapper{
+    }
+
+    #logo{
+        width: 30%;
+    }
+
+    #navigation{
+        width: calc(70% - 20px);
+        margin-left: 20px;
+    }
+
+    #main_content{
+        margin-top: 20px;
+    }
+
+    .sponsors{
+        width: calc(50% - 15px/2);
+        margin-top: 15px;
+
+        &.highlight{
+            margin-left: 15px;
+        }
+    }
+}
+
+@media only Screen and (min-width: 1024px){
+    #wrapper{
+        width: 940px;
+        margin: 0px auto;
+        padding: 20px;
+    }
+    
+    #logo{
+        width: 260px;
+    }
+    
+    #navigation{
+        width: 660px;
+    }
+    
+    #main_content{
+        width: 860px;
+        padding: 40px;
+        margin-bottom: 20px;
+    }
+    
+    #about{
+        width: 650px;
+        display: inline-block;
+    }
+    
+    #advertisement{
+        min-height: 200px;
+        width: 155px;
+        background-color: #C8BFE7;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 50px;
+    }
+    
+    .sponsors{
+        width: calc((100% - 10px)/3);
+        display: inline-block;
+        margin-top: 0px;
+
+
+        &.highlight, &.extra{
+            margin-left: 5px;
+        }
+    }
+}
+
