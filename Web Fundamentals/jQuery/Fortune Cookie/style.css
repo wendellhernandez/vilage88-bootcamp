@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #333;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+span {
+  font-weight: bold;
+}
+main {
+  width: 700px;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #222;
+}
+img {
+  width: 100px;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+  border: 1px solid #5581a6;
+  background-color: white;
+}

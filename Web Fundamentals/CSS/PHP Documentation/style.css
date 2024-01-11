@@ -67,10 +67,6 @@ form{
     text-decoration: none;
 }
 
-.directory_container a:hover{
-    color: #8892bf;
-}
-
 .directory_container span{
     color: white;
 }
@@ -114,10 +110,6 @@ form{
     text-decoration: none;
     font-size: .75rem;
     margin-left: 10px;
-}
-
-.request_section a:hover{
-    color: #8892bf;
 }
 
 h1{
