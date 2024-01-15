@@ -23,9 +23,6 @@ nav a {
   display: inline-block;
   vertical-align: top;
 }
-nav a:hover {
-  background-color: #55483c;
-}
 nav .adjust_link {
   margin-left: 431px;
 }
@@ -117,8 +114,4 @@ main p {
 }
 .container a.warning {
   background-color: #94700C;
-}
-div.container a:hover {
-  background-color: yellow;
-  color: black;
 }
