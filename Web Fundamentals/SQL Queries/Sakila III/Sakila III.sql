@@ -42,10 +42,10 @@ GROUP BY concat(monthname(payment_date) , '-' , year(payment_date));
 -- TASK 2
 USE sakila;
 
-SELECT concat(hour(payment_date), 'th hour') AS hour_of_the_day, sum(amount) AS total_payments_received
+SELECT date_format(payment_date, '%h %p') AS hour_of_the_day, sum(amount) AS total_payments_received
 FROM customer
 LEFT JOIN payment
 ON customer.customer_id = payment.customer_id
-GROUP BY concat(hour(payment_date), 'th hour')
+GROUP BY hour(payment_date)
 ORDER BY sum(amount) DESC
 LIMIT 10;
