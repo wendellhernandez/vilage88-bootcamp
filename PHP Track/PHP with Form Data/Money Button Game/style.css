@@ -1,0 +1,164 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #333;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('assets/bg.jpg');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header{
+    padding: 20px 20%;
+    box-shadow: 0px 0px 7px 0px black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    input{
+        cursor: pointer;
+        background-color: #FE2A77;
+        color: white;
+        font-weight: bold;
+        font-size: 1.1rem;
+        padding: 10px 20px;
+        box-shadow: 0px 0px 7px 0px black;
+        border: none;
+        border-radius: 3px;
+
+        &:hover{
+            background-color: #FA6000;
+        }
+    }
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    .bet_container{
+        display: block;
+        width: 300px;
+        text-align: center;
+        padding: 30px;
+        padding-top: 1px;
+        padding-bottom: 20px;
+        margin-top: 40px;
+        border-radius: 10px;
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0px 0px 7px 0px black;
+
+        &#low_risk{
+            background-color: #B2CEA8;
+        }
+
+        &#moderate_risk{
+            background-color: #1E6BB1;
+        }
+
+        &#high_risk{
+            background-color: #ED2C01;
+        }
+
+        &#severe_risk{
+            background-color: #C30C4A;
+        }
+    
+        span{
+            color: #F2B722;
+            text-shadow: 0px 0px 5px black;
+            font-weight: bold;
+        }
+    
+        h1{
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+        }
+    
+        form{
+            display: flex;
+            flex-direction: column;
+    
+            label, input{
+                margin-bottom: 5px;
+                padding: 7px;
+                border-radius: 3px;
+                border: none;
+            }
+    
+            label{
+                padding: 0px;
+                color: #222;
+                font-weight: bold;
+                text-shadow: 0px 0px 5px #E9A600;
+            }
+    
+            input[type='submit']{
+                margin-top: 10px;
+                cursor: pointer;
+                background-color: #E9A600;
+                color: white;
+                font-weight: bold;
+                font-size: 1.1rem;
+                box-shadow: 0px 0px 7px 0px black;
+                border: none;
+    
+                &:hover{
+                    background-color: #FA6000;
+                }
+            }
+        }
+    }
+}
+
+.host_container{
+    width: 1100px;
+    margin: 0 auto;
+    margin-top: 40px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 7px 0px black;
+    border-radius: 10px;
+    padding: 20px;
+
+    span{
+        color: #F2B722;
+        text-shadow: 0px 0px 5px black;
+        font-weight: bold;
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .game_log{
+        padding: 20px;
+        background-color: #36012F;
+        border-radius: 10px;
+        box-shadow: 0px 0px 7px 0px black;
+        height: 250px;
+        overflow-y: scroll;
+
+        p{
+            margin: 0;
+        }
+
+        .player_win{
+            color: #B2CEA8;
+        }
+
+        .player_lose{
+            color: #ED2C01;
+        }
+    }
+}
