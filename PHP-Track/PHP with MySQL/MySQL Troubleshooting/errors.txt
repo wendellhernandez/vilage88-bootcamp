@@ -1,0 +1,20 @@
+//NETWORK ERROR
+
+Warning: mysqli::__construct(): php_network_getaddresses: getaddrinfo failed: No such host is known. in C:\Files\vilage88-bootcamp\PHP-Track\PHP with MySQL\Raffle Entry\includes\new-connection.php on line 10
+
+FIX:
+provide the correct hostname.
+
+//AUTHORIZATION ERROR
+
+Warning: mysqli::__construct(): (HY000/1045): Access denied for user 'roo'@'localhost' (using password: NO) in C:\Files\vilage88-bootcamp\PHP-Track\PHP with MySQL\Raffle Entry\includes\new-connection.php on line 10
+
+FIX:
+provide the correct database username and password.
+
+//AUTHENTICATION ERROR
+
+Warning: mysqli::__construct(): (HY000/1049): Unknown database 'raffle_d' in C:\Files\vilage88-bootcamp\PHP-Track\PHP with MySQL\Raffle Entry\includes\new-connection.php on line 10
+
+FIX:
+provide the correct database name.
