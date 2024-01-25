@@ -1,0 +1,375 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.9rem;
+  color: #444;
+  background-image: url('../assets/bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+header {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+header nav {
+  width: 1200px;
+  margin: 0 auto;
+}
+header nav img {
+  height: 100px;
+}
+header ul {
+  list-style: none;
+  display: flex;
+}
+header a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+header .login_signup {
+  justify-content: flex-end;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+header .login_signup a {
+  margin-left: 15px;
+}
+header .login_signup a:hover {
+  color: orange;
+}
+header div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header div img {
+  height: 40px;
+}
+header div form {
+  width: 75%;
+  background-color: #333;
+  display: flex;
+}
+header div form input[type="text"] {
+  width: 95%;
+  padding: 10px;
+}
+header div form button {
+  width: 5%;
+  padding: 10px;
+  cursor: pointer;
+}
+header div form button:hover {
+  background-color: orange;
+  color: white;
+}
+header div a {
+  position: relative;
+}
+header div a i {
+  font-size: 1.5rem;
+  margin-right: 40px;
+}
+header div a i:hover {
+  color: orange;
+}
+header div a span {
+  position: absolute;
+  top: -5px;
+  left: 20px;
+  background-color: white;
+  color: #FF4D18;
+  padding: 1px 3px 0px 2px;
+  border-radius: 2px;
+  border: 1px solid #FF4D18;
+  font-size: 0.8rem;
+}
+header .header_category {
+  justify-content: center;
+  font-size: 0.8rem;
+  margin: 0;
+  margin-top: 5px;
+}
+header .header_category a {
+  margin-inline: 10px;
+  line-height: 1rem;
+}
+header .header_category a:hover {
+  color: orange;
+}
+main {
+  width: 1200px;
+  margin: 0 auto;
+  padding-block: 30px;
+}
+main .hero_container {
+  width: 1146px;
+  margin: 0 auto;
+  display: flex;
+}
+main .carousel_container {
+  width: 765px;
+  margin-right: 4px;
+}
+main .carousel_container img {
+  width: 100%;
+  height: 230px;
+  border-radius: 3px;
+}
+main .hero_highlights img {
+  display: inline-block;
+  height: 113px;
+  border-radius: 3px;
+}
+main .category_wrapper {
+  background-color: white;
+  margin-top: 15px;
+}
+main .category_wrapper p {
+  padding: 20px;
+  font-size: 1rem;
+  color: #757575;
+  margin: 0;
+}
+main .category_wrapper .category_container {
+  display: flex;
+}
+main .category_wrapper .category_container a {
+  width: calc(100%/8);
+  text-decoration: none;
+  color: #333;
+  text-align: center;
+  border-block: 1px solid #eee;
+  border-right: 1px solid #eee;
+  padding: 15px;
+  padding-top: 5px;
+}
+main .category_wrapper .category_container a:hover {
+  box-shadow: 0px 0px 2px 0px #999;
+}
+main .category_wrapper .category_container a img {
+  width: 80%;
+}
+main .daily_discover {
+  text-align: center;
+  color: #FF4D18;
+  font-size: 1rem;
+  background-color: white;
+  border-bottom: 4px solid #FF4D18;
+  padding-block: 15px;
+  margin-top: 30px;
+}
+main .product_wrapper {
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+main .product_container {
+  width: 184px;
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: 1px 1px 1px 0 #999;
+  cursor: pointer;
+}
+main .product_container:hover {
+  border: 1px solid #FF4D18;
+  border-radius: 0px;
+}
+main .product_container img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+main .product_container p {
+  font-size: 0.7rem;
+  height: 40px;
+  overflow: hidden;
+  padding-inline: 8px;
+  margin-top: 8px;
+}
+main .product_container .product_price {
+  color: red;
+  padding-inline: 8px;
+  height: auto;
+  font-size: 0.95rem;
+}
+main .product_container .rating {
+  padding-inline: 8px;
+  padding-bottom: 8px;
+  font-size: 0.8rem;
+}
+main .product_container .rating i {
+  color: #FF4D18;
+  font-size: 0.7rem;
+}
+footer {
+  padding-block: 30px;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+footer ul {
+  display: flex;
+  margin: 0;
+  gap: 5px;
+  margin-left: 100px;
+}
+footer li {
+  list-style: none;
+  border-right: 1px solid #999;
+  padding-right: 5px;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+.signup_form_container {
+  background-image: url('../assets/form.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 1px 25px 20px 25px;
+  border-radius: 3px;
+  width: 35%;
+  margin-left: auto;
+  box-shadow: 0px 0px 7px black;
+}
+.signup_form_container p {
+  margin-bottom: 10px;
+  color: white;
+  font-size: 1.4rem;
+}
+.signup_form_container .error {
+  text-align: center;
+  color: #AD0A2C;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.signup_form_container span {
+  display: block;
+  text-align: center;
+  color: #FF4D18;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+.signup_form_container form {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.signup_form_container form input,
+.signup_form_container form label {
+  margin-bottom: 8px;
+}
+.signup_form_container form input {
+  padding: 8px;
+}
+.signup_form_container form input[type='submit'] {
+  background-color: #FF4D18;
+  cursor: pointer;
+  border: 1px solid #FF4D18;
+  color: white;
+  border-radius: 2px;
+  margin-block: 15px;
+}
+.signup_form_container form input[type='submit']:hover {
+  background-color: orange;
+}
+.signup_form_container .form_inquiry {
+  text-align: center;
+  color: #222;
+}
+.signup_form_container .form_inquiry a {
+  text-decoration: none;
+  color: white;
+}
+.signup_form_container .form_inquiry a:hover {
+  color: #588581;
+}
+.account_container {
+  background-color: white;
+  border-radius: 3px;
+  width: 30%;
+  text-align: center;
+  margin: 30px auto;
+  box-shadow: 0px 0px 1px 0px #999;
+}
+.account_container img {
+  width: 200px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 100vw;
+  margin-bottom: 20px;
+  border: 1px solid #999;
+}
+.account_container #fullname {
+  margin-bottom: 0;
+}
+.account_container a {
+  color: #777;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+.account_container a:hover {
+  color: orange;
+}
+.account_container p {
+  color: #555;
+  margin: 0;
+}
+.account_container span {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+.reset_container {
+  margin: 0 auto;
+  margin-top: 40px;
+  background-color: white;
+  padding: 1px 20px 0px 20px;
+  border-radius: 3px;
+  width: 35%;
+  align-self: flex-start;
+}
+.reset_container p {
+  font-size: 1.4rem;
+}
+.reset_container .error {
+  text-align: center;
+  color: #AD0A2C;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.reset_container form {
+  display: flex;
+  flex-direction: column;
+}
+.reset_container form input,
+.reset_container form label {
+  margin-bottom: 6px;
+}
+.reset_container form input {
+  padding: 8px;
+}
+.reset_container form input[type='submit'] {
+  background-color: #FF4D18;
+  cursor: pointer;
+  border: 1px solid #FF4D18;
+  color: #FFFFFF;
+  border-radius: 2px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.reset_container form input[type='submit']:hover {
+  background-color: orange;
+}

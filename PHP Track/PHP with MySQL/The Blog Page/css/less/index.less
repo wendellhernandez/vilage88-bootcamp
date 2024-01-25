@@ -1,0 +1,218 @@
+header{
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    nav{
+        width: 1200px;
+        margin: 0 auto;
+
+        img{
+            height: 100px;
+        }
+    }
+
+    ul{
+        list-style: none;
+        display: flex;
+    }
+
+    a{
+        color: @white;
+        text-decoration: none;
+    }
+
+    .login_signup{
+        justify-content: flex-end;
+        margin-top: 5px;
+        margin-bottom: 15px;
+
+        a{
+            margin-left: 15px;
+            font-size: 1rem;
+
+            &:hover{
+                color: @hover;
+            }
+        }
+
+        a.nav_username{
+            color: #222;
+        }
+    }
+
+    div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img{
+            height: 40px;
+        }
+
+        form{
+            width: 75%;
+            background-color: #333;
+            display: flex;
+
+            input[type="text"]{
+                width: 95%;
+                padding: 10px;
+            }
+
+            button{
+                width: 5%;
+                padding: 10px;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: @hover;
+                    color: white;
+                }
+            }
+        }
+
+        a{
+            position: relative;
+
+            i{
+                font-size: 1.5rem;
+                margin-right: 40px;
+    
+                &:hover{
+                    color: @hover;
+                }
+            }
+
+            span{
+                position: absolute;
+                top: -5px;
+                left: 20px;
+                background-color: white;
+                color: @main;
+                padding: 1px 3px 0px 2px;
+                border-radius: 2px;
+                border: 1px solid @main;
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+
+main{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+
+    &.blog_container{
+        background-color: black;
+        border-radius: 3px;
+        width: 60%;
+        margin: 20px auto;
+        box-shadow: 0px 0px 1px 0px #999;
+    
+        img{
+            width: 100px;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 100vw;
+            border: 1px solid #999;
+        }
+
+        h1{
+            font-size: 2rem;
+        }
+
+        p{
+            color: #999;
+            text-align: justify;
+        }
+
+        form{
+            text-align: right;
+
+            textarea{
+                width: 100%;
+                max-width: 100%;
+                height: 60px;
+                padding: 6px;
+            }
+
+            input{
+                cursor: pointer;
+                font-size: 1rem;
+                box-shadow: 2px 2px 0px 0px #FFE752;
+            }
+        }
+    
+        a{
+            color: #777;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            text-decoration: none;
+    
+            &:hover{
+                color: @hover;
+            }
+        }
+    
+        span{
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .reply_container{
+            span{
+                width: 90%;
+                margin-left: auto;
+            }
+
+            p{
+                width: 90%;
+                margin-left: auto;
+            }
+
+            form{
+                width: 90%;
+                margin-left: auto;
+
+                textarea{
+                    height: 31px;
+                }
+
+                input{
+                    cursor: pointer;
+                    font-size: 1rem;
+                    box-shadow: 2px 2px 0px 0px #AB6FB5;
+                }
+            }
+        }
+    }
+}
+
+footer{
+    padding-block: 30px;
+    color: white;
+    display: flex;
+    justify-content: center;
+
+    ul{
+        display: flex;
+        margin: 0;
+        gap: 5px;
+        margin-left: 100px;
+    }
+
+    li{
+        list-style: none;
+        border-right: 1px solid #999;
+        padding-right: 5px;
+    }
+    
+    a{
+        text-decoration: none;
+        color: white;
+    }
+}
