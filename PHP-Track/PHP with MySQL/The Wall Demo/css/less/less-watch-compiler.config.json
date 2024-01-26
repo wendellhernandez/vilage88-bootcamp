@@ -1,0 +1,10 @@
+{
+    "watchFolder": "./",   
+    "outputFolder": "../",
+    "mainFile": "style.less",   
+    "includeHidden": false,
+    "sourceMap": false,
+    "runOnce": false,
+    "enableJs": true,
+    "minified": false
+}

@@ -1,0 +1,201 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #333;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('assets/bg.jpg');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    padding-top: 50px;
+    overflow-x: hidden;
+}
+
+main{
+    display: block;
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px;
+    padding-top: 1px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 0px 7px 0px black;
+    background-image: url('assets/form.jpg');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    div{
+        color: white;
+        background-color: #FF4747;
+        font-weight: bold;
+        font-size: 1rem;
+        padding: 5px;
+    }
+
+    p{
+        font-size: 2rem;
+        font-weight: bold;
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    .upload_form{
+        display: flex;
+        flex-direction: column;
+
+        label, input{
+            margin-bottom: 5px;
+            padding: 7px;
+            border-radius: 2px;
+            border: none;
+        }
+
+        label{
+            padding: 0px;
+            color: #222;
+            font-weight: bold;
+            text-shadow: 0px 0px 3px white;
+        }
+
+        input[type='file']{
+            cursor: pointer;
+        }
+
+        input[type='submit']{
+            margin-top: 10px;
+            cursor: pointer;
+            background-color: #AD0B6E;
+            color: white;
+            font-weight: bold;
+            font-size: 1.1rem;
+
+            &:hover{
+                background-color: #E25BB7;
+            }
+        }
+    }
+}
+
+header{
+    width: 700px;
+    padding: 10px;
+    background-color: #FEDC33;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    text-align: center;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 0px 7px 0px black;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #222;
+}
+
+.entry_container{
+    width: 700px;
+    display: flex;
+    padding: 10px;
+    flex-wrap: wrap;
+
+    p, a{
+        font-size: 1rem;
+        margin: 0;
+        margin-bottom: 5px;
+        border-bottom: 1px solid #333;
+        height: 25px;
+        display: block;
+        width: 30%;
+        padding: 0;
+        color: #222;
+
+        i{
+            height: .9rem;
+        }
+    }
+
+    .table_head{
+        background-color: #333;
+        padding: 5px;
+        color: white;
+    }
+
+    .table_delete{
+        display: block;
+        width: 10%;
+    }
+
+    form{
+        border-bottom: 1px solid #333;
+        height: 25px;
+        margin-bottom: 5px;
+
+        button{
+            font-size: 1rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        i{
+            color: #930906;
+
+            &:hover{
+                color: #E66017;
+            }
+        }
+    }
+}
+
+h1{
+    text-align: center;
+    background-color: #FEDC33;
+    color: #222;
+}
+
+h2{
+    text-align: center;
+}
+
+table{
+    margin: 0 auto;
+    font-size: .9rem;
+}
+
+td{
+    background-color: #aaa;
+    color: #222;
+}
+
+.tablerow_bg_0{
+    background-color: black;
+    color: white;
+}
+
+.pagination{
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 30px;
+
+    a{
+        background-color: #ddd;
+        color: #222;
+        text-decoration: none;
+        padding: 5px 10px;
+        border-radius: 3px;
+
+        &:hover{
+            background-color: #777;
+            color: white;
+        }
+    }
+}
