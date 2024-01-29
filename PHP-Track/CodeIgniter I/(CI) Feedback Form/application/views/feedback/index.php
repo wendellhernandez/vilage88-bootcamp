@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+    <main>
+        <h1>Feedback Form</h1>
+        <form action="/feedback/result" method="post">
+            <label for="name">Your Name (optional):</label>
+            <input type="text" name="name" id="name" placeholder="Enter your name here">
+            <label>Course Title:</label>
+            <select name="course">
+                <option value="Php Track">PHP Track</option>
+                <option value="Javascript Track">Javascript Track</option>
+            </select>
+            <label>Given Score (1-10):</label>
+            <select name="score">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <label for="reason">Reason:</label>
+            <textarea name="reason" id="reason"></textarea>
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+</body>
+</html>

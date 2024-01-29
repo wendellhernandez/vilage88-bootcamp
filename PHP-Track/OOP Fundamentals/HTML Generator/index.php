@@ -17,13 +17,16 @@
             }else{
                 $list = "ul";
             }
-
-            foreach($array as $arr){
 ?>
                 <<?= $list ?>>
+<?php
+            foreach($array as $arr){
+?>
                     <li><?= $arr ?></li>
-                </<?= $list ?>>
 <?php       }
+?>
+                </<?= $list ?>>
+<?php
         }
     }
 
