@@ -15,21 +15,23 @@
     $risk_type = $_POST['risk_type'];
     $risk = $_POST['risk'];
 
-    if(rand(1,100) > $risk){
-        $_SESSION['money'] += $reward;
-        $round_data['value'] = 'You gained ' . $reward;
-        $round_data['status'] = 'win';
-    }else{
-        $_SESSION['money'] -= $penalty;
-        $round_data['value'] = 'You lost ' . $penalty;
-        $round_data['status'] = 'lose';
+    if($_SESSION['money'] > 0){
+        if(rand(1,100) > $risk){
+            $_SESSION['money'] += $reward;
+            $round_data['value'] = 'You gained ' . $reward;
+            $round_data['status'] = 'win';
+        }else{
+            $_SESSION['money'] -= $penalty;
+            $round_data['value'] = 'You lost ' . $penalty;
+            $round_data['status'] = 'lose';
+        }
+
+        $round_data['risk_type'] = $risk_type;
+        $round_data['date'] = date("m/d/Y h:i:sa");
+        $round_data['money'] = $_SESSION['money'];
+
+        $_SESSION['game_data'][] = $round_data;
     }
-
-    $round_data['risk_type'] = $risk_type;
-    $round_data['date'] = date("m/d/Y h:i:sa");
-    $round_data['money'] = $_SESSION['money'];
-
-    $_SESSION['game_data'][] = $round_data;
 
     header('Location: ./');
     die();
