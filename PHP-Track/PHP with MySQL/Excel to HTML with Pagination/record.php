@@ -42,13 +42,15 @@
         $row++;
 ?>
             <tr>
-<?php
+<?php   if(!empty($csv_array[$i+1])){
         foreach($csv_array[$i+1] as $csvdata){
+            
 ?>
                 <td class="tablerow_bg_<?= $row % 2 ?>">
                     <?= $csvdata . "<br>" ?>
                 </td>
-<?php   }
+<?php       
+        }}
 ?>
             </tr>
 <?php }
@@ -56,7 +58,7 @@
         </table>
         <div class="pagination">
 <?php
-    for($i=0; $i<(count($csv_array)/$item_per_page)-1; $i++){
+    for($i=0; $i<(count($csv_array)/$item_per_page); $i++){
 ?>
             <a href="./record.php?file_name=<?= $file_name ?>&page=<?= $i+1 ?>"><?= $i+1 ?></a>
 <?php }
