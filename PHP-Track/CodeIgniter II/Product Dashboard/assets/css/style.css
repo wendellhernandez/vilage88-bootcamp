@@ -1,3 +1,8 @@
+/* 
+DOCU: Base styles
+
+Owner: Wendell
+*/
 *{
     box-sizing: border-box;
     margin: 0;
@@ -6,4 +11,269 @@
 
 body{
     background-color: #0276CF;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("/assets/images/bg/bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* 
+DOCU: Style for partials/header view
+
+Owner: Wendell
+*/
+header{
+    background-color: #4BB3FD;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    box-shadow: 0px 0px 5px 0px black;
+
+    nav{
+        width: 1200px;
+        margin: 0 auto;
+        
+        p{
+            font-size: 2.5rem;
+            margin-left: 20px;
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 23px;
+        }
+    }
+
+    a{
+        text-decoration: none;
+        color: white;
+    }
+
+    ul{
+        list-style: none;
+        display: flex;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        gap: 15px;
+        justify-content: center;
+
+        .logout_button{
+            color: black;
+            margin-left: 900px;
+        }
+    }
+
+    div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img{
+            height: 40px;
+        }
+
+        form{
+            width: 75%;
+            background-color: #333;
+            display: flex;
+
+            input[type="text"]{
+                width: 95%;
+                padding: 10px;
+            }
+
+            button{
+                width: 5%;
+                padding: 10px;
+                cursor: pointer;
+            }
+        }
+
+        a{
+            position: relative;
+
+            i{
+                font-size: 1.5rem;
+                margin-right: 40px;
+            }
+
+            span{
+                position: absolute;
+                top: -5px;
+                left: 20px;
+                background-color: #EE4D2D;
+                color: white;
+                padding: 1px 3px 0px 2px;
+                border-radius: 2px;
+                border: 1px solid #4BB3FD;
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+
+/* 
+DOCU: Style for partials/footer view
+
+Owner: Wendell
+*/
+footer{
+    padding-block: 30px;
+    background-color: #4BB3FD;
+    box-shadow: 0px 0px 5px 0px black;
+    text-align: center;
+
+    ul{
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        font-size: .9rem;
+    }
+
+    li{
+        list-style: none;
+        border-right: 1px solid black;
+        padding-right: 5px;
+    }
+    
+    a{
+        text-decoration: none;
+        color: white;
+    }
+
+    p{
+        margin-top: 5px;
+    }
+}
+
+/* 
+DOCU: Style for the forms in users/login and users/register view
+
+Owner: Wendell
+*/
+.form_container{
+    background-color: white;
+    padding: 15px 20px;
+    border-radius: 3px;
+    width: 400px;
+    margin: 40px auto;
+    box-shadow: 0px 0px 5px 0px black;
+
+    p{
+        margin-bottom: 20px;
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+
+        input, label{
+            margin-bottom: 5px;
+        }
+
+        input{
+            padding: 5px;
+
+            &[type='submit']{
+                background-color: #4BB3FD;
+                cursor: pointer;
+                border: 1px solid black;
+                color: white;
+                border-radius: 2px;
+                margin-top: 5px;
+                padding: 5px;
+                margin-bottom: 15px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .form_redirect{
+        text-align: center;
+        font-size: .9rem;
+        color: #4BB3FD;
+
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    }
+}
+
+/* 
+DOCU: Style for products/dashboard_admin view
+
+Owner: Wendell
+*/
+.dashboard_title{
+    width: 1100px;
+    margin: 0px auto;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00487C;
+    padding: 20px;
+    border-radius: 5px;
+
+    p{
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: white;
+    }
+
+    a{
+        padding: 5px 10px;
+        background-color: #4BB3FD;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+        color: white;
+        box-shadow: 3px 3px 0px 0px #0496FF;
+    }
+}
+
+.products_table{
+    width: 1100px;
+    margin: 0px auto;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #00487C;
+
+    div{
+        display: flex;
+        background-color: #4BB3FD;
+        margin-bottom: 3px;
+        padding: 2px;
+
+        p{
+            width: calc(60%/3);
+            overflow-wrap: break-word;
+        }
+
+        a{
+            color: white;
+            text-decoration: none;
+        }
+
+        .id_section{
+            width: 7%;
+        }
+
+        .name_section{
+            width: 33%;
+        }
+
+        &.bg_row_0{
+            background-color: #0496FF;
+        }
+    }
+
+    .product_header{
+        font-weight: bold;
+        font-size: 1.1rem;
+        color: white;
+        background-color: #00487C;
+    }
 }
