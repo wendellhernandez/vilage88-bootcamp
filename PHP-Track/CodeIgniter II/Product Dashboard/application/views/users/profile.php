@@ -1,0 +1,21 @@
+        <!-- 
+        DOCU: Users can edit their profiles by clicking the edit profile button that redirects to /users/edit route.
+
+        Owner: Wendell
+        -->
+        <div class="dashboard_title">
+            <p>Profile</p>
+            <a href="/users/edit">Edit Profile</a>
+        </div>
+
+        <!-- 
+        DOCU: Shows all user info
+
+        Owner: Wendell
+        -->
+        <div class="profile_info">
+            <i class="fa-solid fa-user-astronaut"></i>
+            <p><span>Email Address: </span>wendell@gmail.com</p>
+            <p><span>First Name: </span>Wendell</p>
+            <p><span>Last Name: </span>Hernandez</p>
+        </div>

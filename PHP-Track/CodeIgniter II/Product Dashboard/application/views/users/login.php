@@ -9,9 +9,9 @@
             <p>Login</p>
             <?= form_open("/login") ?>
                 <label for="email_address">Email Address</label>
-                <input required type="text" name="email_address" id="email_address">
+                <input type="text" name="email_address" id="email_address">
                 <label for="password">Password</label>
-                <input required type="password" name="password" id="password">
+                <input type="password" name="password" id="password">
                 <input type="submit" value="LOGIN">
             </form>
             <div class="form_redirect">New to Clickshop? <a href="/register">Register</a></div>
