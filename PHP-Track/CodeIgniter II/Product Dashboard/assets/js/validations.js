@@ -15,6 +15,10 @@ function passwordsMatch() {
 	return $('#confirm_password').val() == $('#password').val();
 }
 
+function passwordsMatchNew() {
+	return $('#new_confirm_password').val() == $('#new_password').val();
+}
+
 function swapClass($obj, beforeClass, afterClass) {
 	$obj.removeClass(beforeClass);
 	$obj.addClass(afterClass);
@@ -31,13 +35,13 @@ function success($obj) {
 $(document).ready(function() {
 	/*
 	DOCU: This event is called everytime the user is typing.
-	This checks if the email , firstname , lastname , password and confirm password
-	is not empty.
-	Change input background to green if not empty. Red otherwise.
+	This checks if user input is not empty.
+	Change input class to fail or success.
+	Background to green if not empty. Red otherwise.
 
 	Owner: Wendell
 	*/
-	$('#email_address , #first_name , #last_name , #password').keyup(function(){
+	$('#email_address , #first_name , #last_name , #password , #name , #description , #price , #inventory_count , #old_password , #new_password , #new_confirm_password').keyup(function(){
 		hasPresence($(this)) ? success($(this)) : fail($(this));
 	});
 
@@ -63,6 +67,10 @@ $(document).ready(function() {
 		meetsLengthRequirements($(this), 7) ? success($(this)) : fail($(this));
 	});
 
+	$('#new_password').keyup(function(){
+		meetsLengthRequirements($(this), 7) ? success($(this)) : fail($(this));
+	});
+
 	/*
 	DOCU: This event is called everytime the user is typing.
 	This checks if the passwords are a match.
@@ -72,5 +80,9 @@ $(document).ready(function() {
 	*/
 	$('#confirm_password').keyup(function(){
 		passwordsMatch() ? success($(this)) : fail($(this));
+	});
+
+	$('#new_confirm_password').keyup(function(){
+		passwordsMatchNew() ? success($(this)) : fail($(this));
 	});
 });

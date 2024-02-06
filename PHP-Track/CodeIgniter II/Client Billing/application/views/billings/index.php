@@ -20,7 +20,7 @@
                 // Edit Data for Canvas JS
                 var options = {
                     title: {
-                        text: "Client Billing - 2011"              
+                        text: "Client Billing"              
                     },
                     data: [              
                     {

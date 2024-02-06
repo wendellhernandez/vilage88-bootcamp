@@ -23,24 +23,21 @@
                     <p>Quantity Sold</p>
                     <p>Action</p>
                 </div>
-                <div>
-                    <p class="id_section">ID</p>
-                    <p class="name_section"><a href="/products/show/[product_id]">Name</a></p>
-                    <p>Inventory Count</p>
-                    <p>Quantity Sold</p>
+<?php
+    foreach($products as $product){
+        $row++
+?>
+                <div class="bg_row_<?= $row%2 ?>">
+                    <p class="id_section"><?= $product["id"] ?></p>
+                    <p class="name_section"><a href="/products/show/<?= $product["id"] ?>"><?= $product["name"] ?></a></p>
+                    <p><?= $product["inventory_count"] ?></p>
+                    <p><?= $product["quantity_sold"] ?></p>
                     <p>
-                        <a href="/products/edit/[product_id]"><i class="fa-solid fa-pen-to-square"></i></a>
-                        <a href="/products/edit/[product_id]"><i class="fa-solid fa-trash"></i></a>
+                        <a href="/products/edit/<?= $product["id"] ?>"><i class="fa-solid fa-pen-to-square"></i></a>
+                        <a href="/products/remove/<?= $product["id"] ?>"><i class="fa-solid fa-trash"></i></a>
                     </p>
                 </div>
-                <div class="bg_row_0">
-                    <p class="id_section">ID</p>
-                    <p class="name_section"><a href="/products/show/[product_id]">Name</a></p>
-                    <p>Inventory Count</p>
-                    <p>Quantity Sold</p>
-                    <p>
-                        <a href="/products/edit/[product_id]"><i class="fa-solid fa-pen-to-square"></i></a>
-                        <a href="/products/edit/[product_id]"><i class="fa-solid fa-trash"></i></a>
-                    </p>
-                </div>
+<?php
+    }
+?>
             </div>

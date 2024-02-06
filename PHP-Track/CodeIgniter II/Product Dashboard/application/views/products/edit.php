@@ -4,7 +4,7 @@
         Owner: Wendell
             -->
         <div class="dashboard_title">
-            <p>Edit Product #1</p>
+            <p>Edit Product #<?= $product["id"] ?></p>
             <a href="/dashboard/admin">Return to Dashboard</a>
         </div>
 
@@ -15,15 +15,16 @@
         Owner: Wendell
          -->
          <div class="form_container">
-            <?= form_open("/products/edit_product/[product id]") ?>
+            <?= form_open("/products/edit_product/{$product['id']}") ?>
+                <?= $validation_errors ?>
                 <label for="name">Name</label>
-                <input type="text" name="name" id="name" value="product name">
+                <input type="text" name="name" id="name" value="<?= $product["name"] ?>">
                 <label for="description">Description</label>
-                <textarea name="description" id="description" rows="5">description</textarea>
+                <textarea name="description" id="description" rows="5"><?= $product["description"] ?></textarea>
                 <label for="price">Price</label>
-                <input type="number" name="price" id="price" value="300">
+                <input type="number" name="price" id="price" value="<?= $product["price"] ?>">
                 <label for="inventory_count">Inventory Count</label>
-                <input type="number" name="inventory_count" id="inventory_count" value="4">
+                <input type="number" name="inventory_count" id="inventory_count" value="<?= $product["inventory_count"] ?>">
                 <input type="submit" value="SAVE">
             </form>
         </div>

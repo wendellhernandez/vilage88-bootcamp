@@ -15,16 +15,17 @@
                     <p>Inventory Count</p>
                     <p>Quantity Sold</p>
                 </div>
-                <div>
-                    <p class="id_section">ID</p>
-                    <p class="name_section"><a href="/products/show/[product_id]">Name</a></p>
-                    <p>Inventory Count</p>
-                    <p>Quantity Sold</p>
+<?php
+    foreach($products as $product){
+        $row++
+?>
+                <div class="bg_row_<?= $row%2 ?>">
+                    <p class="id_section"><?= $product["id"] ?></p>
+                    <p class="name_section"><a href="/products/show/<?= $product["id"] ?>"><?= $product["name"] ?></a></p>
+                    <p><?= $product["inventory_count"] ?></p>
+                    <p><?= $product["quantity_sold"] ?></p>
                 </div>
-                <div class="bg_row_0">
-                    <p class="id_section">ID</p>
-                    <p class="name_section"><a href="/products/show/[product_id]">Name</a></p>
-                    <p>Inventory Count</p>
-                    <p>Quantity Sold</p>
-                </div>
+<?php
+    }
+?>
             </div>

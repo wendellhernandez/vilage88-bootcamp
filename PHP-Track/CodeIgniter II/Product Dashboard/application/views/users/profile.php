@@ -15,7 +15,7 @@
         -->
         <div class="profile_info">
             <i class="fa-solid fa-user-astronaut"></i>
-            <p><span>Email Address: </span>wendell@gmail.com</p>
-            <p><span>First Name: </span>Wendell</p>
-            <p><span>Last Name: </span>Hernandez</p>
+            <p><span>Email Address: </span><?= $user["email_address"] ?></p>
+            <p><span>First Name: </span><?= $user["first_name"] ?></p>
+            <p><span>Last Name: </span><?= $user["last_name"] ?></p>
         </div>

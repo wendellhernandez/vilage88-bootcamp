@@ -4,29 +4,31 @@
 
             Owner: Wendell
              -->
-            <h1>V88 T-shirt ($250)</h1>
-            <p><span>Added since:</span> December 20th 2021</p>
-            <p><span>Product ID:</span> #1</p>
-            <p><span>Description:</span> Legit, comfortable V88 t-shirt available in Legit, comfortable V88 t-shirt available in Legit, comfortable V88 t-shirt available in Legit, comfortable V88 t-shirt available in Legit, comfortable V88 t-shirt available in any size</p>
-            <p><span>Total sold:</span> 100</p>
-            <p><span>Available stocks:</span> 120</p>
+            <h1><?= $product["name"] ?> ($<?= $product["price"] ?>)</h1>
+            <p><span>Added since:</span> <?= $product["date"] ?></p>
+            <p><span>Product ID:</span> #<?= $product["id"] ?></p>
+            <p><span>Description:</span> <?= $product["description"] ?></p>
+            <p><span>Total sold:</span> <?= $product["quantity_sold"] ?></p>
+            <p><span>Available stocks:</span> <?= $product["inventory_count"] ?></p>
 
             <!-- 
             DOCU: This shows all the reviews.
-            Clicking the post button directs to /reviews/add_review route.
+            Clicking the post button directs to /reviews/add_review/[product_id] route.
 
             Owner: Wendell
              -->
             <p class="review_section_title">Leave a Review</p>
 
-            <?= form_open("/reviews/add_review" , "" , array("product_id" => 1)) ?>
+            <?= form_open("/reviews/add_review/{$product["id"]}") ?>
                 <textarea name="review" id="review" class="review_textbox"></textarea>
                 <input type="submit" value="POST">
             </form>
-
+<?php
+    foreach($reviews as $review){
+?>
             <div class="review_container">
-                <div>Mam Karen <span>7 hours ago</span></div>
-                <p>Super cute! Will buy again.</p>
+                <div><?= $review["user_name"] ?> <?= $time_diff ?><span><?= $review["review_time"] ?></span></div>
+                <p><?= $review["user_review"] ?></p>
 
                 <!-- 
                 DOCU: This shows all the replies to this specific review.
@@ -34,39 +36,24 @@
 
                 Owner: Wendell
                 -->
+<?php
+        foreach($replies as $reply){
+            if($reply["reply_review_id"] == $review["review_id"]){
+?>
                 <div class="reply_container">
-                    <div>Mam Karen <span>5 hours ago</span></div>
-                    <p>Super cute! Will buy again.</p>
+                    <div><?= $reply["user_name"] ?> <span><?= $reply["reply_time"] ?></span></div>
+                    <p><?= $reply["user_reply"] ?></p>
                 </div>
-
-                <div class="reply_container">
-                    <div>Mam Karen <span>23 minutes ago</span></div>
-                    <p>Super cute! Will buy again.</p>
-                </div>
-
-                <?= form_open("/reviews/add_reply/[review_id]" , "" , array("product_id" => 1)) ?>
+<?php   
+            }
+        }
+?>
+                <?= form_open("/reviews/add_reply/{$review["review_id"]}/{$product["id"]}") ?>
                     <textarea name="reply" id="reply" class="reply_textbox"></textarea>
                     <input type="submit" value="REPLY">
                 </form>
             </div>
-
-            <div class="review_container">
-                <div>Mam Karen <span>7 hours ago</span></div>
-                <p>Super cute! Will buy again.</p>
-
-                <div class="reply_container">
-                    <div>Mam Karen <span>5 hours ago</span></div>
-                    <p>Super cute! Will buy again.</p>
-                </div>
-
-                <div class="reply_container">
-                    <div>Mam Karen <span>23 minutes ago</span></div>
-                    <p>Super cute! Will buy again.</p>
-                </div>
-
-                <?= form_open("/reviews/add_reply" , "" , array("product_id" => 1)) ?>
-                    <textarea name="reply" id="reply" class="reply_textbox"></textarea>
-                    <input type="submit" value="REPLY">
-                </form>
-            </div>
+<?php
+    }
+?>
         </div>

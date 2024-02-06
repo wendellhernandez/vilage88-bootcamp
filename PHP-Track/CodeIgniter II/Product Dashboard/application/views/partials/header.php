@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="/assets/css/style.css">
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <script src="/assets/js/validations.js"></script>
+        <script src="/assets/js/script.js"></script>
     </head>
     <body>
         <header>

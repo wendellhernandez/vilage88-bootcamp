@@ -32,6 +32,7 @@ CREATE TABLE `products` (
 
 CREATE TABLE `reviews` (
     `id` int AUTO_INCREMENT NOT NULL ,
+    `product_id` int NOT NULL ,
     `user_id` int NOT NULL ,
     `review` text  NOT NULL ,
     `created_at` datetime  NOT NULL DEFAULT current_timestamp ,
@@ -43,8 +44,9 @@ CREATE TABLE `reviews` (
 
 CREATE TABLE `replies` (
     `id` int AUTO_INCREMENT NOT NULL ,
-    `user_id` int NOT NULL ,
+    `product_id` int NOT NULL ,
     `review_id` int NOT NULL ,
+    `user_id` int NOT NULL ,
     `reply` text  NOT NULL ,
     `created_at` datetime  NOT NULL DEFAULT current_timestamp ,
     `updated_at` datetime  NOT NULL DEFAULT current_timestamp ,

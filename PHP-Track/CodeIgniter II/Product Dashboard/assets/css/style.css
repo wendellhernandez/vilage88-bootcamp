@@ -488,17 +488,16 @@ PHP validation_errors()
 
 Owner: Wendell
 */
-form{
-    .success{
-        background-color: #6BBF59;
-        border-radius: 2px;
-    }
 
-    .fail{
-        background-color: #D81E5B;
-        color: white;
-        border-radius: 2px;
-    }
+.success{
+    background-color: #6BBF59;
+    border-radius: 2px;
+}
+
+.fail{
+    background-color: #D81E5B;
+    color: white;
+    border-radius: 2px;
 }
 
 .validation_errors{

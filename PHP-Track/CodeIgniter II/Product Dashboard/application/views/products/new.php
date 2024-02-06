@@ -10,12 +10,13 @@
 
         <!-- 
         DOCU: This is the Add Product Form.
-        Transfers to the /products/add_product route when the add product button is clicked.
+        Transfers to the /products/add route when the add product button is clicked.
 
         Owner: Wendell
          -->
          <div class="form_container">
-            <?= form_open("/products/add_product") ?>
+            <?= form_open("/products/add") ?>
+                <?= $validation_errors ?>
                 <label for="name">Name</label>
                 <input type="text" name="name" id="name">
                 <label for="description">Description</label>
