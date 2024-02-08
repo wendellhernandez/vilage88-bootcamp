@@ -138,21 +138,10 @@
             $reviews = $this->review->get_reviews_by_product_id($product_id);
             $replies = $this->review->get_replies_by_product_id($product_id);
 
-            if($reviews[0]["day"] > 0){
-                $time_diff = $reviews[0]["day"] . "day/s ago";
-            }else if($reviews[0]["hour"] > 0){
-                $time_diff = $reviews[0]["hour"] . "hour/s ago";
-            }else if($reviews[0]["min"] > 0){
-                $time_diff = $reviews[0]["min"] . "min/s ago";
-            }else{
-                $time_diff = $reviews[0]["sec"] . "secs ago";
-            }
-
             $data = array(
                 "product" => $product,
                 "reviews" => $reviews,
-                "replies" => $replies,
-                "time_diff" => $time_diff
+                "replies" => $replies
             );
 
             $this->load->view("partials/header");

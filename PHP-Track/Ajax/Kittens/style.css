@@ -1,0 +1,14 @@
+body{
+    background-color: #222;
+    color: white;
+    text-align: center;
+}
+
+img{
+    width: 110px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    margin: 2px;
+    border: 1px solid yellow;
+    border-radius: 4px;
+}

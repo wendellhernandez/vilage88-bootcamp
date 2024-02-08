@@ -25,9 +25,26 @@
             </form>
 <?php
     foreach($reviews as $review){
+        /* 
+        DOCU: Check for time elapsed.
+        Display the full date if more than 1 week ago
+
+        Owner: Wendell
+        */
+        if($review["day"] > 7){
+            $time_diff = $review["review_date"];
+        }else if($review["day"] > 0){
+            $time_diff = $review["day"] . " days ago";
+        }else if($review["hour"] > 0){
+            $time_diff = $review["hour"] . " hours ago";
+        }else if($review["min"] > 0){
+            $time_diff = $review["min"] . " minutes ago";
+        }else{
+            $time_diff = $review["sec"] . " seconds ago";
+        }
 ?>
             <div class="review_container">
-                <div><?= $review["user_name"] ?> <?= $time_diff ?><span><?= $review["review_time"] ?></span></div>
+                <div><?= $review["user_name"] ?> <span><?= $time_diff ?></span></div>
                 <p><?= $review["user_review"] ?></p>
 
                 <!-- 
@@ -39,9 +56,26 @@
 <?php
         foreach($replies as $reply){
             if($reply["reply_review_id"] == $review["review_id"]){
+                /* 
+                DOCU: Check for time elapsed.
+                Display the full date if more than 1 week ago
+
+                Owner: Wendell
+                */
+                if($reply["day"] > 7){
+                    $time_diff = $reply["reply_date"];
+                }else if($reply["day"] > 0){
+                    $time_diff = $reply["day"] . " days ago";
+                }else if($reply["hour"] > 0){
+                    $time_diff = $reply["hour"] . " hours ago";
+                }else if($reply["min"] > 0){
+                    $time_diff = $reply["min"] . " minutes ago";
+                }else{
+                    $time_diff = $reply["sec"] . " seconds ago";
+                }
 ?>
                 <div class="reply_container">
-                    <div><?= $reply["user_name"] ?> <span><?= $reply["reply_time"] ?></span></div>
+                    <div><?= $reply["user_name"] ?> <span><?= $time_diff ?></div>
                     <p><?= $reply["user_reply"] ?></p>
                 </div>
 <?php   

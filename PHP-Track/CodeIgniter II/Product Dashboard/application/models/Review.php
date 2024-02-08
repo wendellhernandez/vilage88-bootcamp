@@ -20,16 +20,16 @@
         Owner: Wendell
         */
         public function get_reviews_by_product_id($product_id){
-            $query = "SELECT reviews.id AS review_id , concat(users.first_name , ' ' , users.last_name) AS user_name , reviews.created_at AS review_time , reviews.review AS user_review , 
-            date_format(now() , '%s') - date_format(reviews.created_at , '%s') AS sec , 
-            date_format(now() , '%i') - date_format(reviews.created_at , '%i') AS min , 
-            date_format(now() , '%H') - date_format(reviews.created_at , '%H') AS hour , 
-            date_format(now() , '%d') - date_format(reviews.created_at , '%d') AS day
+            $query = "SELECT reviews.id AS review_id , concat(users.first_name , ' ' , users.last_name) AS user_name , date_format(reviews.created_at , '%M %d, %Y') AS review_date , reviews.review AS user_review , 
+            (date_format(now() , '%s') - date_format(reviews.created_at , '%s')) AS sec , 
+            (date_format(now() , '%i') - date_format(reviews.created_at , '%i')) AS min , 
+            (date_format(now() , '%H') - date_format(reviews.created_at , '%H')) AS hour , 
+            (date_format(now() , '%d') - date_format(reviews.created_at , '%d')) AS day
             FROM reviews 
             LEFT JOIN users ON reviews.user_id = users.id
             LEFT JOIN products ON reviews.product_id = products.id
             WHERE product_id = $product_id
-            ORDER BY review_time DESC
+            ORDER BY review_date DESC , day , hour , min , sec
             ";
 
             return $this->db->query($query)->result_array();
@@ -55,11 +55,15 @@
         Owner: Wendell
         */
         public function get_replies_by_product_id($product_id){
-            $query = "SELECT replies.review_id AS reply_review_id , concat(users.first_name , ' ' , users.last_name) AS user_name , replies.created_at AS reply_time , replies.reply AS user_reply 
+            $query = "SELECT replies.review_id AS reply_review_id , concat(users.first_name , ' ' , users.last_name) AS user_name , date_format(replies.created_at , '%M %d, %Y') AS reply_date , replies.reply AS user_reply , 
+            (date_format(now() , '%s') - date_format(replies.created_at , '%s')) AS sec , 
+            (date_format(now() , '%i') - date_format(replies.created_at , '%i')) AS min , 
+            (date_format(now() , '%H') - date_format(replies.created_at , '%H')) AS hour , 
+            (date_format(now() , '%d') - date_format(replies.created_at , '%d')) AS day
             FROM replies 
             LEFT JOIN users ON replies.user_id = users.id
             WHERE replies.product_id = $product_id
-            ORDER BY reply_time
+            ORDER BY reply_date , day DESC , hour DESC , min DESC , sec DESC
             ";
 
             return $this->db->query($query)->result_array();
