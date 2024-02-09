@@ -28,13 +28,10 @@
                 <p class="sub_title">Sports</p>
 <?php 
     /* Uses a foreach loop to load the sports in the database */
-    foreach($sports as $sport){
-?>
+    foreach($sports as $sport){ ?>
                 <input type="checkbox" name="sports[]" value="<?= $sport["name"] ?>" id="<?= $sport["name"] ?>">
                 <label for="<?= $sport["name"] ?>"><?= $sport["name"] ?></label>
-<?php
-    }
-?>
+<?php } ?>
                 <!-- Submit button -->
                 <input type="submit" value="Search" class="submit_button">
             </form>

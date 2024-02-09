@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #0276CF;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h1{
+    width: 100%;
+}
+
+#order_wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .order_container{
+        width: 250px;
+        padding: 20px;
+        background-color: #4BB3FD;
+        border: 2px solid #00487C;
+        box-shadow: 3px 3px 0px 0px #00487C;
+        margin: 5px;
+        overflow-wrap: break-word;
+        position: relative;
+    
+        .order_number{
+            font-size: 1.7rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+textarea{
+    padding: 5px;
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+
+.form_delete{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    
+    button{
+        background-color: #D81E5B;
+        color: white;
+        padding: 3px;
+        font-size: 1.1rem;
+        border-radius: 3px;
+        cursor: pointer;
+
+        &:hover{
+            background-color: #F0544F;
+        }
+    }
+}
+
+#form_create{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: #6BBF59;
+    padding: 20px;
+
+    input{
+        padding: 5px;
+    }
+
+    input[type="text"]{
+        width: 75%;
+    }
+
+    input[type="submit"]{
+        width: 8%;
+        cursor: pointer;
+        background-color: #08A045;
+        color: white;
+        font-weight: bold;
+    }
+}
+

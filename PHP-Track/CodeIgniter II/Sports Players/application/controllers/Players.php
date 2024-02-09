@@ -6,9 +6,7 @@
         public function index(){
             $data = array(
                 "sports" => $this->Sport->get_sports(),
-                "players" => $this->Player->get_players(),
-                "name_filter" => $this->input->get("name_filter" , TRUE),
-                "genders" => $this->input->get("gender" , TRUE)
+                "players" => $this->Player->get_players()
             );
 
             $this->load->view("players/index" , $data);
