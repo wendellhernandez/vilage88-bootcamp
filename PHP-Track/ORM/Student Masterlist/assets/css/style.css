@@ -25,6 +25,13 @@ body{
         font-size: 1.2rem;
         font-weight: bold;
         margin-bottom: 10px;
+        color: #00487C;
+    }
+
+    p{
+        font-size: .9rem;
+        color: red;
+        font-style: italic;
     }
 
     input , label , select{
@@ -43,6 +50,9 @@ body{
 
         p{
             margin-bottom: 5px;
+            color: black;
+            font-size: 1rem;
+            font-style: normal;
         }
     }
 }

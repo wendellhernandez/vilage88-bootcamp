@@ -1,0 +1,123 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0276CF;
+}
+
+.student_form{
+    width: 350px;
+    margin: 0 auto;
+    background-color: #4BB3FD;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px solid #00487C;
+    box-shadow: 4px 4px 0px 0px #00487C;
+    margin-block: 20px;
+
+    .lead_title{
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #00487C;
+    }
+
+    p{
+        font-size: .9rem;
+        color: red;
+        font-style: italic;
+    }
+
+    input , label , select{
+        padding: 5px;
+
+        &[type="submit"]{
+            background-color: #00487C;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    }
+
+    div{
+        padding: 10px;
+
+        p{
+            margin-bottom: 5px;
+            color: black;
+            font-size: 1rem;
+            font-style: normal;
+        }
+    }
+}
+
+.student_list{
+    width: 1300px;
+    margin: 0 auto;
+    background-color: #4BB3FD;
+    display: flex;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px solid #00487C;
+    box-shadow: 4px 4px 0px 0px #00487C;
+    flex-wrap: wrap;
+
+    .lead_title{
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .table_head{
+        background-color: #00487C;
+        color: white;
+    }
+
+    form , div{
+        width: calc(100%/7);
+        border-bottom: 1px solid black;
+        padding: 2px;
+        
+        button{
+            color: red;
+            cursor: pointer;
+            background: none;
+            padding: 0;
+            border: none;
+            font-weight: bold;
+        }
+    }
+
+    form{
+        border: none;
+        display: inline-block;
+        color: red;
+    }
+}
+
+.delete_form{
+    width: 350px;
+    margin: 0 auto;
+    background-color: #4BB3FD;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px solid #00487C;
+    box-shadow: 4px 4px 0px 0px #00487C;
+
+    button{
+        padding: 5px;
+        background-color: #D81E5B;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+    }
+}
