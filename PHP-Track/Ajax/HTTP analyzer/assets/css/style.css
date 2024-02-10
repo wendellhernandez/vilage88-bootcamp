@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #0276CF;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form{
+    color: white;
+    text-align: center;
+    margin-block: 40px;
+
+    label , input{
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 5px;
+        padding: 3px 5px;
+
+        &[name="url"]{
+            width: 600px;
+        }
+
+        &[type="submit"]{
+            cursor: pointer;
+        }
+    }
+}
+
+.fetch_container{
+    display: flex;
+    justify-content: center;
+    width: 1100px;
+    margin: 0 auto;
+    gap: 20px;
+
+    .errors{
+        color: red;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .response_container{
+        width: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #4BB3FD;
+        padding: 10px;
+        box-shadow: 0px 0px 3px black;
+
+        p{
+            width: 100%;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+    }
+
+    .tag_analyzer{
+        align-self: flex-start;
+
+        .html_tags{
+            width: 35%;
+            border-left: 1px solid black;
+
+            .title{
+                background-color: #00487C;
+                color: white;
+            }
+
+            div{
+                border-bottom: 1px solid black;
+                padding: 2px;
+            }
+        }
+
+        .appearance_count{
+            width: 65%;
+            border-inline: 1px solid black;
+
+            .title{
+                background-color: #00487C;
+                color: white;
+            }
+
+            div{
+                border-bottom: 1px solid black;
+                padding: 2px;
+            }
+        }
+    }
+
+    .http_response{
+        width: 70%;
+        overflow-y: scroll;
+        align-self: flex-start;
+        max-height: 430px;
+    }
+}
