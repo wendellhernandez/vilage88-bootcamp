@@ -1,0 +1,7 @@
+curl -X POST https://wsapi.simsimi.com/190410/talk \
+     -H "Content-Type: application/json" \
+     -H "x-api-key: 1ZracURR8gqVYu-oxkcMl8BU4s-vVMMWoX~qQ7ny" \
+     -d '{
+            "utext": "hello", 
+            "lang": "en" 
+     }'              

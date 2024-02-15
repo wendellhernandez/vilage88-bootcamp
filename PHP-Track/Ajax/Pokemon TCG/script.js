@@ -24,11 +24,11 @@ $(document).ready(function(){
             let evolvesFrom = json.data.evolvesFrom;
 
             html = `
-            <img src='${img_small_url}'>
-            <h1>${name}</h1>
-            <p>TYPES: ${types}</p>
-            <p>HP: ${hp}</p>
-            <p>EVOLVES FROM: ${evolvesFrom}</p>
+                <img src='${img_small_url}'>
+                <h1>${name}</h1>
+                <p>TYPES: ${types}</p>
+                <p>HP: ${hp}</p>
+                <p>EVOLVES FROM: ${evolvesFrom}</p>
             `;
 
             $("#modal").html(html);

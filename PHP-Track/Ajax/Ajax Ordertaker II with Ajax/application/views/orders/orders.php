@@ -16,7 +16,7 @@
         <div id="order_wrapper"></div>
 
         <form action="/orders/create" id="form_create">
-            <input type="text" name="order" placeholder="Type customer's order here">
+            <input type="text" name="order" placeholder="Type customer's order here" required>
             <input type="submit" value="Submit">
         </form>
     </body>
