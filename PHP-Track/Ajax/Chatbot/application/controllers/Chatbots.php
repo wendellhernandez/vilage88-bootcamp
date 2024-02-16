@@ -36,7 +36,6 @@
                 CURLOPT_SSL_VERIFYHOST	=> 0
             ));
     
-            ;
             if(!$results = curl_exec($curl)){
                 echo curl_error($curl);
             }
