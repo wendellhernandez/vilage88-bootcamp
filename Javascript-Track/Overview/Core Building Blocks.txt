@@ -1,0 +1,39 @@
+1.What is the benefit of learning Javascript?
+
+- If you learn other backend programming first, you still need to learn Javascript frontend anyway. So
+why not learn Javascript first. Javascript is a little bit Different but it still follows a lot
+ of the C family syntaxes. it’s also easy for someone who knows Javascript to ask other developers 
+ for help, even if that developer is not that familiar with Javascript.
+
+2.What type of applications can be built with Javascript?
+
+You can do frontend, backend and mobile app using only one language.
+
+3. Which programming language is good for beginners to learn (according to Michael's perspectives)?
+
+- Javascript. You can create full stack web applications. As well as native mobile apps.
+- Python. Easy to learn but you still need Javascript to make a full stack web app.
+- PHP. Easy to build complex apps but in a crappy way.
+
+4. Which programming language is not good for beginners to learn, as their first language (according to Michael's perspectives)?
+
+- Java. Java is a lot stricter. Hard to make a complex app. You still need Javascript to make a full stack web app.
+- C#. Very strict like Java
+- C++. Most commonly used in simple apps. Can get very confusing for beginners.
+- Ruby. Great language for experienced developers to write little code but harder to learn with.
+- Swift. Hard for beginners to learn.
+- Objective C. Even harder to learn than swift.
+
+5. Study how the 5 core building blocks are implemented from one language to another.  
+What are your observations?  Are they similar?  Different?  
+Which of these programming languages are you already familiar with?
+
+- They are mostly similar with little differences here and there. If you know how the structure of one language,
+you can easily learn the other. But the way different languages approach OOP is quite different. But that is
+not a problem for a developer with strong logics.
+- Im familiar with PHP and Javascript
+
+6. Anything else you've learned as you've read these articles and pondered about your situation?
+
+- I was always confused how start programming. Where to start. How to start.
+I thank hacker hero for giving me guidance on how to approach this questions.
