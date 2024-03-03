@@ -1,0 +1,129 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #333;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('/image/bg.jpg');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header{
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0px 0px 7px 0px black;
+    backdrop-filter: blur(10px);
+    font-size: 2rem;
+    font-weight: bold;
+
+    a{
+        text-decoration: none;
+        text-shadow: 0px 0px 3px black;
+        color: #EF5E00;
+    }
+}
+
+main{
+    display: block;
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px;
+    padding-top: 1px;
+    margin-top: 100px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 0px 7px 0px black;
+    backdrop-filter: blur(10px);
+
+    span{
+        color: #F2B722;
+        text-shadow: 0px 0px 5px black;
+        font-weight: bold;
+    }
+
+    h1{
+        font-size: 2rem;
+        font-weight: bold;
+        color: white;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+
+        label, input{
+            margin-bottom: 5px;
+            padding: 7px;
+            border-radius: 2px;
+            border: none;
+        }
+
+        label{
+            padding: 0px;
+            color: #222;
+            font-weight: bold;
+            text-shadow: 0px 0px 5px #E9A600;
+        }
+
+        input[type='submit']{
+            margin-top: 10px;
+            cursor: pointer;
+            background-color: #E9A600;
+            color: white;
+            font-weight: bold;
+            border: 1px solid #E9A600;
+            font-size: 1.1rem;
+
+            &:hover{
+                background-color: #FA6000;
+            }
+        }
+    }
+
+    .discount_container{
+        width: 100%;
+        padding: 10px;
+        background-image: url('/image/form.jpg');
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        box-shadow: 0px 0px 7px 0px black;
+        border-radius: 10px;
+
+        p{
+            color: black;
+            font-weight: bold;
+        }
+
+        div{
+            font-size: 2.8rem;
+            font-weight: bold;
+        }
+
+        #reset_button{
+            background-color: #CF2A27;
+            margin-top: 40px;
+
+            &:hover{
+                color: black;
+            }
+        }
+
+        #claim_button{
+            background-color: #009E0F;
+            margin-top: 0px;
+
+            &:hover{
+                color: black;
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Visitor</title>
+        <link rel="stylesheet" href="/stylesheet/style.css">
+    </head>
+    <body>
+        <header>
+            <a href="/reset"><button>RESET</button></a>
+        </header>
+        <h1>You are Visitor #<%= visit %></h1>
+<% if(visit%2 === 0){ %>
+        <h2>"Even flowers need rain"</h2>
+<% }else{ %>
+        <h2>"Beat the odds"</h2>
+<% } %>
+        <a href="/repeat"><button>REPEAT</button></a>
+    </body>
+</html>

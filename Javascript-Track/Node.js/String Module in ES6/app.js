@@ -1,4 +1,4 @@
-const string = require('./stringlib')();
+const string = require('./stringlib');
 
 console.log(string.concat("Village", "88"));
 console.log(string.repeat("ha", 3));

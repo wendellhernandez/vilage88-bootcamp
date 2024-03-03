@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="/stylesheets/style.css">
+    </head>
+    <body>
+        <h1>Details about <%= title %></h1>
+        <img src="/images/<%= image %>">
+        <h2>Awards</h2>
+        <ul>
+<% for(const award of awards){ %>
+            <li><%= award %></li>
+<% } %>
+        </ul>
+    </body>
+</html>
