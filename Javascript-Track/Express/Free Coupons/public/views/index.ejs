@@ -9,20 +9,20 @@
 </head>
 <body>
     <header>
-        <a href="index.php">Freecoupon.org</a>
+        <a href="/">Freecoupon.org</a>
     </header>
     <main>
         <h1>Welcome <span>Customer</span>!</h1>
         <p>
             We're giving away free coupons as a token of our appreciation
-            if coupon_left session > 0
-        for the first <span>coupon_left</span> customer(s)
-
+<% if(coupon_left > 0){ %>
+            for the first <span><%= coupon_left %></span> customer(s)
+<% } %>
         </p>
-        <form action="claim.inc.php" method="post">
+        <form action="claim" method="post">
             <label for="name">Kindly type your name:</label>
             <input type="text" name="name" id="name" placeholder="Enter your name here">
-            <input type="submit" name="submit_button" value="Submit">
+            <input type="submit" name="claim_button" value="Submit">
         </form>
     </main>
 </body>

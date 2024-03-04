@@ -1,0 +1,31 @@
+body{
+    background-color: #222;
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+
+    a{
+        color: yellow;
+    }
+}
+
+.container{
+    width: 600px;
+    height: 400px;
+    border: 1px solid white;
+    background-color: black;
+    overflow-y: scroll;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    list-style: none;
+    
+    li{
+        margin-top: 10px;
+    }
+}

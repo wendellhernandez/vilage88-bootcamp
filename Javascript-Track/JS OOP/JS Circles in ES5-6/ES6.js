@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded' , () => {
-    class Circle_main{
+    class Circle{
         constructor(){
             this.canvas_wrapper = document.getElementById('canvas_wrapper');
             this.reset_button = document.getElementById('reset_button');
@@ -7,47 +7,47 @@ document.addEventListener('DOMContentLoaded' , () => {
             this.background = '#FFE66D';
         }
 
-        active_chooser(){
-            for(let i=0; i<this.bg_choice.length; i++){
-                this.bg_choice[i].addEventListener('click' , () => {
-                    for(let i=0; i<this.bg_choice.length; i++){
-                        this.bg_choice[i].classList.remove('active');
+        active_chooser(obj){
+            for(let i=0; i<obj.bg_choice.length; i++){
+                obj.bg_choice[i].addEventListener('click' , function() {
+                    for(let i=0; i<obj.bg_choice.length; i++){
+                        obj.bg_choice[i].classList.remove('active');
                     }
         
-                    this.background = this.bg_choice[i].dataset.background;
-                    this.bg_choice[i].classList.add('active');
+                    obj.background = obj.bg_choice[i].dataset.background;
+                    obj.bg_choice[i].classList.add('active');
                 })
             }
         }
 
-        circle_maker(){
-            this.canvas_wrapper.addEventListener('click' , (e) => {
+        circle_maker(obj){
+            obj.canvas_wrapper.addEventListener('click' , function(e) {
                 let x_axis = e.clientX;
                 let y_axis = e.clientY;
                 let size = Math.ceil(Math.random() * 190) + 10;
                 let elem = document.createElement('p');
         
-                elem.setAttribute('style' , `position:absolute; top:${y_axis-size/2}px; left:${x_axis-size/2}px; width:${size}px; height:${size}px; background-color: ${this.background}; border-radius:100vh; border: 4px solid black`);
+                elem.setAttribute('style' , `position:absolute; top:${y_axis-size/2}px; left:${x_axis-size/2}px; width:${size}px; height:${size}px; background-color: ${obj.background}; border-radius:100vh; border: 4px solid black`);
         
-                this.canvas_wrapper.appendChild(elem);
+                obj.canvas_wrapper.appendChild(elem);
             })
         }
 
-        canvas_reset(){
-            this.reset_button.addEventListener('click' , () => {
-                this.canvas_wrapper.innerHTML = '';
+        canvas_reset(obj){
+            obj.reset_button.addEventListener('click' , function() {
+                obj.canvas_wrapper.innerHTML = '';
         
-                for(let i=0; i<this.bg_choice.length; i++){
-                    this.bg_choice[i].classList.remove('active');
+                for(let i=0; i<obj.bg_choice.length; i++){
+                    obj.bg_choice[i].classList.remove('active');
                 }
         
-                this.bg_choice[0].classList.add('active');
-                this.background = '#FFE66D';
+                obj.bg_choice[0].classList.add('active');
+                obj.background = '#FFE66D';
             })
         }
 
-        make_circle_smaller(){
-            setInterval(() => {
+        make_circle_smaller(obj){
+            setInterval(function() {
                 let circles = document.getElementsByTagName('p');
         
                 if(circles){
@@ -69,10 +69,10 @@ document.addEventListener('DOMContentLoaded' , () => {
         }
     }
 
-    let circle_main1 = new Circle_main();
+    let circle = new Circle();
 
-    circle_main1.active_chooser();
-    circle_main1.circle_maker();
-    circle_main1.canvas_reset();
-    circle_main1.make_circle_smaller();
+    circle.active_chooser(circle);
+    circle.circle_maker(circle);
+    circle.canvas_reset(circle);
+    circle.make_circle_smaller(circle);
 })

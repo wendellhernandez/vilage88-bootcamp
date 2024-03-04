@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Coupons</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="/stylesheet/style.css">
+</head>
+<body>
+    <header>
+        <a href="/">Freecoupon.org</a>
+    </header>
+    <main>
+        <h1>Thank you <span><%= name %></span>!</h1>
+        <p>
+            We're giving away free coupons as a token of our appreciation
+<% if(coupon_left > 0){ %>
+            for the first <span><%= coupon_left %></span> customer(s)
+        </p>
+        <div class="discount_container">
+            <p>50% Discount</p>
+            <div><%= random %></div>
+<% }else{ %>
+        </p>
+        <div class="discount_container">
+            <p>Sorry!</p>
+            <div>Unavailable</div>
+<% } %>
+            <form action="/claim" method="post">
+                <input type="submit" name="reset_button" value="Reset" id="reset_button">
+                <input type="submit" name="claim_button" value="Claim"  id="claim_button">
+            </form>
+        </div>
+    </main>
+</body>
+</html>
