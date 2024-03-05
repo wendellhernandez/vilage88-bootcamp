@@ -1,0 +1,38 @@
+:root{
+    --scale: 2;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #333;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+main{
+    width: calc(260px * var(--scale));
+    height: calc(364px * var(--scale));
+    background-color: #222;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+    background: url('/image/NES\ -\ 1942\ -\ Stage\ 26\ Ayako\ Fight\ 1.png') no-repeat 0% 100%;
+    background-size: 100%;
+    image-rendering: pixelated;
+
+    .player{
+        width: calc(34px * var(--scale));
+        height: calc(24px * var(--scale));
+        background: url('/image/Arcade\ -\ 1942\ -\ General\ Sprites.png') no-repeat 0px 0px;
+        background-size: calc(327px * var(--scale));
+        image-rendering: pixelated;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        pointer-events: none;
+    }
+}

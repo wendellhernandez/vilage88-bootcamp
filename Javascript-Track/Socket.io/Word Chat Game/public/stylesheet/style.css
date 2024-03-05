@@ -7,4 +7,42 @@ body{
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    /* display: none; */
+}
+
+h1{
+    letter-spacing: .5rem;
+}
+
+.chatbox{
+    text-align: left;
+    background-color: #50BC5A;
+    border: 2px solid white;
+    padding: 10px;
+    width: 600px;
+    height: 300px;
+    margin: 0 auto;
+    color: black;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+
+    p{
+        margin: 5px 0px;
+    }
+}
+
+.correct_answer{
+    font-style: italic;
+    font-weight: bold;
+    color: white;
+}
+
+.message_input{
+    width: 530px;
+    padding: 5px;
+}
+
+button{
+    padding: 5px;
+    cursor: pointer;
 }
