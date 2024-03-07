@@ -20,9 +20,11 @@ main{
     margin: 20px auto;
     overflow: hidden;
     position: relative;
-    background: url('/image/NES\ -\ 1942\ -\ Stage\ 26\ Ayako\ Fight\ 1.png') no-repeat 0% 100%;
+    background: url('/image/NES\ -\ 1942\ -\ Stage\ 26\ Ayako\ Fight\ 1.png') no-repeat;
+    background-position: 0% 100%;
     background-size: 100%;
     image-rendering: pixelated;
+    /* cursor: none; */
 
     .player{
         width: calc(34px * var(--scale));
@@ -31,8 +33,26 @@ main{
         background-size: calc(327px * var(--scale));
         image-rendering: pixelated;
         position: absolute;
-        top: 0px;
-        left: 0px;
+        pointer-events: none;
+    }
+
+    .projectile{
+        width: calc(5px * var(--scale));
+        height: calc(5px * var(--scale));
+        background-color: red;
+        border: 2px solid yellow;
+        border-radius: 50%;
+        position: absolute;
+        pointer-events: none;
+    }
+
+    .enemy{
+        width: calc(17px * var(--scale));
+        height: calc(17px * var(--scale));
+        background: url('/image/Arcade\ -\ 1942\ -\ General\ Sprites.png') no-repeat calc(-4px * var(--scale)) calc(-200px * var(--scale));
+        background-size: calc(327px * var(--scale));
+        image-rendering: pixelated;
+        position: absolute;
         pointer-events: none;
     }
 }

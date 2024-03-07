@@ -1,46 +1,65 @@
-$(document).ready(function(){
-    const socket = io();
-    let socket_id;
-    let all_games;
-    let game = {
-        player: {
-            topOffset: 0,
-            leftOffset: 0
-        },
-        enemy: {
+const socket = io();
+/*
+    Docu: Game Variables
+    Owner: Wendell
+*/
+let background_position = 100;
+let enemies = [];
+let players = [];
+let projectile_counter = 0
+let player_update = {};
+/*
+    Docu: Get game variables from the server every 14ms
+    Owner: Wendell
+*/
+socket.on('update_client' , function(data){
+    background_position = data.background_position;
+    players = data.players;
+    enemies = data.enemies;
+})
+/*
+    Docu: Send game variables to the server every 14ms
+    Owner: Wendell
+*/
+function update(){
+    socket.emit('update_server' , player_update);
+    /*
+        Docu: updates the background position so it moves up
+        Owner: Wendell
+    */
+    $('main').css('background-position' , `0% ${background_position}%`);
+    $('main').html('');
 
+    for(const player of players){
+        let elem = $('<div>');
+        elem.addClass('player');
+        elem.css({'top' : player.yAxis , 'left' : player.xAxis});
+        $('main').append(elem);
+
+        for(const projectile of player.projectiles){
+            let elem = $('<div>');
+            elem.addClass('projectile');
+            elem.css({'top' : projectile.yAxis , 'left' : projectile.xAxis});
+            $('main').append(elem);
         }
-    };
-
-    socket.on('socket_id' , function(id){
-        socket_id = id;
-
-        let elem = $('<div class="player"></div>').appendTo($('main'));
-        // $('main').append(elem);
-    })
-
-    socket.on('update_client' , function(games){
-        all_games = games;
-        game = games[socket_id];
-
-        console.log(game.player.topOffset);
-    })
-    
-    function update(){
-        socket.emit('update_server' , game);
-
-        $('.player').css({top: game.player.topOffset , left: game.player.leftOffset});
-        console.log($('.player'));
-        requestAnimationFrame(update);
     }
-    
+
+    for(const enemy of enemies){
+        let elem = $('<div>');
+        elem.addClass('enemy');
+        elem.css({'top' : enemy.yAxis , 'left' : enemy.xAxis});
+        $('main').append(elem);
+    }
+
     requestAnimationFrame(update);
+}
 
-    $('main').mousemove(function(e){
-        game.player.topOffset = e.offsetY-24;
-        game.player.leftOffset = e.offsetX-24;
-
-        $(this).css('cursor' , 'none');
-    })
-
+// requestAnimationFrame(update);
+/*
+    Docu: Change player position using mouse pointer event
+    Owner: Wendell
+*/
+$('main').mousemove(function(e){
+    player_update.xAxis = e.offsetX-34;
+    player_update.yAxis = e.offsetY-24;
 })
