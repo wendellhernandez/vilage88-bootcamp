@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cars</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="/stylesheet/style.css">
+    </head>
+    <body>
+        <header>
+            <p>You did <%= visits %>x visiting this page.</p>
+            <a href="/reset">Reset</a>
+        </header>
+        <p>You have <%= cars.length %> cars!</p>
+        <p>The cars in the databse are as follows:</p>
+<%_ for(const car of cars){ _%>
+        <p><%= car.name %> - <%= car.year %></p>
+<%_ } _%>
+    </body>
+</html>

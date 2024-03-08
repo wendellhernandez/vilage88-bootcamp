@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('/image/bg.jpg');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+    padding-top: 40px;
+    text-align: center;
+}
+
+a{
+    background-color: red;
+    padding: 8px 16px;
+    color: white;
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
