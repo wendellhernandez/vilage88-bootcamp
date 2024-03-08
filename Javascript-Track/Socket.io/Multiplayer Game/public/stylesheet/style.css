@@ -1,5 +1,5 @@
 :root{
-    --scale: 2;
+    --scale: 2.5;
 }
 
 *{
@@ -13,18 +13,25 @@ body{
     text-align: center;
 }
 
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    gap: 40px;
+}
+
 main{
     width: calc(260px * var(--scale));
     height: calc(364px * var(--scale));
     background-color: #222;
-    margin: 20px auto;
     overflow: hidden;
     position: relative;
     background: url('/image/NES\ -\ 1942\ -\ Stage\ 26\ Ayako\ Fight\ 1.png') no-repeat;
     background-position: 0% 100%;
     background-size: 100%;
     image-rendering: pixelated;
-    /* cursor: none; */
+    cursor: none;
 
     .player{
         width: calc(34px * var(--scale));
@@ -34,14 +41,20 @@ main{
         image-rendering: pixelated;
         position: absolute;
         pointer-events: none;
+
+        span{
+            background-color: rgba(0, 0, 0, .6);
+            color: white;
+            margin-top: 25px;
+            display: inline-block;
+        }
     }
 
     .projectile{
-        width: calc(5px * var(--scale));
-        height: calc(5px * var(--scale));
+        width: calc(2px * var(--scale));
+        height: calc(4px * var(--scale));
         background-color: red;
         border: 2px solid yellow;
-        border-radius: 50%;
         position: absolute;
         pointer-events: none;
     }
@@ -54,5 +67,39 @@ main{
         image-rendering: pixelated;
         position: absolute;
         pointer-events: none;
+
+        span{
+            background-color: rgba(0, 0, 0, .6);
+            color: white;
+        }
     }
+}
+
+.score_board{
+    width: calc(130px * var(--scale));
+    height: calc(364px * var(--scale));
+    background-color: #222;
+    text-align: left;
+    overflow-y: scroll;
+
+    .title{
+        background-color: yellow;
+        color: #222;
+        font-weight: bold;
+        font-size: 2rem;
+        margin: 0;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .score{
+        padding: 8px;
+        font-size: 1.5rem;
+    }
+}
+
+button{
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
 }
