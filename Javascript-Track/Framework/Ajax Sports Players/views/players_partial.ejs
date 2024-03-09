@@ -1,0 +1,11 @@
+<!-- 
+    use for of player of players
+    /* Uses a foreach loop to load the players in the database */
+ -->
+ <% for(const player of players){ %>
+    <div class="player_card">
+        <!-- player.image -->
+        <img src="<%= player.image %>">
+        <p><%= player.player_name %></p>
+    </div>
+<% } %>
