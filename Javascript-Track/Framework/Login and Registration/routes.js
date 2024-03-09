@@ -1,34 +1,19 @@
 /*
-    Middlewares
+    Initialize Express Router
 */
 const express = require("express");
-const routes = express();
-const bodyParser = require('body-parser');
-const session = require('express-session');
-const {view_engine} = require('./config');
-/*
-    Initialize Middlewares
-*/
-routes.set('views', __dirname + '/views');
-routes.set('view engine', view_engine);
-routes.use(bodyParser.urlencoded({ extended: true }));
-routes.use(express.static(__dirname + "/assets"));
-routes.use(session({
-    secret: 'keyboard cat',
-    resave: false,
-    saveUninitialized: true,
-    cookie: { maxAge: 60000 }
-}))
+const router = express.Router();
 /*
     Controllers
 */
 const StudentController = require(`./controllers/Students`);
 /*
-    Routes
+    router
 */
-routes.get("/", StudentController.index);
-routes.get("/students/profile", StudentController.profile);
-routes.post("/login", StudentController.login);
-routes.post("/register", StudentController.register);
+router.get("/", StudentController.index);
+router.get("/students/profile", StudentController.profile);
+router.post("/login", StudentController.login);
+router.post("/register", StudentController.register);
+router.get("/logoff", StudentController.logoff);
 
-module.exports = routes;
+module.exports = router;

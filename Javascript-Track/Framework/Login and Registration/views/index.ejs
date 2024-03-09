@@ -8,18 +8,23 @@
         <link rel="stylesheet" href="/stylesheet/style.css">
     </head>
     <body>
+<%_ if(login_error){ _%>
+        <p class="error"><%= login_error %></p>
+<%_ } _%>
         <form action="/login" method="post">
             <label>
                 Email Address:
-                <input type="text">
+                <input type="text" name="email_address">
             </label>
             <label>
                 Password:
-                <input type="text">
+                <input type="password" name="password">
             </label>
             <input type="submit" value="Login">
         </form>
-
+<%_ if(register_error){ _%>
+        <p class="error"><%= register_error %></p>
+<%_ } _%>
         <form action="/register" method="post">
             <label>
                 First Name:
