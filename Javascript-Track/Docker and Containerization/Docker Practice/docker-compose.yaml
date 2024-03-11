@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+    testapp:
+        build: ./
+        restart: always
+        ports:
+            - '3001:3000'
+        volumes:
+            - ./:/var/www/testapp
+            - /var/www/testapp/node_modules
+        command: npm start
