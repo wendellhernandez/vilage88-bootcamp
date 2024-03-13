@@ -1,0 +1,4 @@
+This definitely makes you code twice as many lines. So I feel that I'm coding more slower.
+But I know when you will start to code more complex projects,
+coding more lines will not matter and you will still be faster than only coding and not 
+testing your codes.

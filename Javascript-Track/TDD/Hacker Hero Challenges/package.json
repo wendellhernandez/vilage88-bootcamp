@@ -1,0 +1,29 @@
+{
+  "name": "hacker-hero-challenges",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test_all": "mocha",
+    "test": "mocha test/test.js",
+    "test2": "mocha test/test2.js",
+    "test3": "mocha test/test3.js",
+    "test4": "mocha test/test4.js",
+    "test5": "mocha test/test5.js",
+    "test6": "mocha test/test6.js",
+    "test7": "mocha test/test7.js",
+    "test8": "mocha test/test8.js",
+    "test9": "mocha test/test9.js",
+    "test10": "mocha test/test10.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.0.0",
+    "mocha": "^10.3.0"
+  }
+}
