@@ -21,7 +21,7 @@ let projectile_timer = 0
     Owner: Wendell
 */
 function getRandHealth(){
-    return Math.floor(Math.random() * 10) + 10;
+    return Math.floor(Math.random() * 20) + 20;
 }
 
 function getRandX(){
@@ -37,7 +37,7 @@ setInterval(function(){
             direction: Math.round(Math.random()) * 2 - 1
         }
     )
-} , 500);
+} , 300);
 
 io.on('connection' , function(socket){
     /*
@@ -162,7 +162,7 @@ io.on('connection' , function(socket){
                     Owner: Wendell
                 */
                 enemies[i].xAxis += enemies[i].direction * 0.3;
-                enemies[i].yAxis += 3;
+                enemies[i].yAxis += 1;
 
                 if(enemies[i].yAxis > 363 * scale){
                     enemies.splice(i,1);
