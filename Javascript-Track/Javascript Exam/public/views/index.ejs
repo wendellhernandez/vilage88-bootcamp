@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Color Theme</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="/stylesheet/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/js/script.js"></script>
+    </head>
+    <body>
+        <!-- 
+            Docu: This is all the buttons to change color and clear the canvas
+            Owner: Wendell
+         -->
+        <header>
+            <span>Build your empire</span>
+            <button class="brick">Brick</button>
+            <button class="grass">Grass</button>
+            <button class="gravel">Gravel</button>
+            <button id="clear">Clear</button>
+        </header>
+        <!-- 
+            Docu: Centering of player container and canvas
+            Owner: Wendell
+         -->
+        <main>
+            <!-- 
+                Docu: This contains the list of all players
+                Owner: Wendell
+            -->
+            <div id="players_container">
+                <h2>List of active players:</h2>
+                <div id="players"></div>
+            </div>
+            <!-- 
+                Docu: This contains all of the blocks made by the players and also all of their cursors
+                Owner: Wendell
+            -->
+            <div id="canvas_container">
+                <div id="canvas"></div>
+                <div id="cursors"></div>
+            </div>
+        </main>
+    </body>
+</html>

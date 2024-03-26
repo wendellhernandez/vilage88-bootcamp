@@ -8,6 +8,6 @@ describe('Return Sum' , function(){
             return a + b;
         }
 
-        expect(add(2,2)).to.equal(4);
+        expect(add(2,'2')).to.equal(4);
     })
 })
