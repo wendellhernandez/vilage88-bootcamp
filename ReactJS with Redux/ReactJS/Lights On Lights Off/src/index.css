@@ -5,16 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #555;
+  background-color: #333;
 }
 
-.container{
-  width: 400px;
-}
-
-.hero{
-  img{
-    width: 600px;
-    aspect-ratio: 2/1;
-  }
+img{
+  width: 300px;
 }

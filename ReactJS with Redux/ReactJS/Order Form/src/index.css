@@ -10,11 +10,19 @@ body {
 
 .container{
   width: 400px;
-}
 
-.hero{
-  img{
-    width: 600px;
-    aspect-ratio: 2/1;
+  p{
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  #checkbox{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    input[type="text"]{
+      width: 70px;
+    }
   }
 }
